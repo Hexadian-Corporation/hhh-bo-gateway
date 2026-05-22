@@ -7,11 +7,7 @@ ENV UV_COMPILE_BYTECODE=1
 ENV UV_LINK_MODE=copy
 COPY pyproject.toml uv.lock ./
 
-# This Dockerfile is for standalone builds only.
-# In the monorepo, Docker Compose uses docker/python-service.Dockerfile instead.
-# Build: DOCKER_BUILDKIT=1 docker build \
-#   --secret id=devpi_username,env=UV_INDEX_HEXADIAN_USERNAME \
-#   --secret id=devpi_password,env=UV_INDEX_HEXADIAN_PASSWORD .
+# Standalone build: see README for BuildKit secret usage.
 RUN --mount=type=secret,id=devpi_username,env=UV_INDEX_HEXADIAN_USERNAME \
     --mount=type=secret,id=devpi_password,env=UV_INDEX_HEXADIAN_PASSWORD \
     : "${UV_INDEX_HEXADIAN_USERNAME:?missing UV_INDEX_HEXADIAN_USERNAME (BuildKit secret devpi_username)}"; \
