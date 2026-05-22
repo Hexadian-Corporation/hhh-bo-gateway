@@ -1,0 +1,11 @@
+name: Issue closed
+
+on:
+  issues:
+    types: [closed]
+
+jobs:
+  issue-closed:
+    uses: Hexadian-Corporation/.github/.github/workflows/issue-closed-reusable.yml@main
+    secrets:
+      PROJECT_TOKEN: ${{ secrets.PROJECT_TOKEN }}
