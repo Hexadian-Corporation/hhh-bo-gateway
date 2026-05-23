@@ -8,7 +8,7 @@ from pydantic_settings import BaseSettings, NoDecode, SettingsConfigDict
 class Settings(BaseSettings):
     log_level: Literal["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"] = "INFO"
     mongo_uri: str = "mongodb://localhost:27017"
-    mongo_database: str = "hhh_bo_gateway"
+    mongo_db: str = "hhh_bo_gateway"
     host: str = "0.0.0.0"
     port: Annotated[int, Field(ge=1, le=65535)] = 8010
     cors_origins: Annotated[list[str], NoDecode] = ["http://localhost:3000", "http://localhost:3001"]
