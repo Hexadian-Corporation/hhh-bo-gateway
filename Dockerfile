@@ -27,9 +27,11 @@ RUN --mount=type=secret,id=devpi_username,env=UV_INDEX_HEXADIAN_USERNAME \
 RUN groupadd --system --gid 10001 appuser \
     && useradd --system --uid 10001 --gid 10001 --home-dir /home/appuser \
        --shell /usr/sbin/nologin --create-home appuser \
+    && mkdir -p /home/appuser/.cache/uv \
     && chown -R appuser:appuser /app /home/appuser
 USER appuser
 ENV HOME=/home/appuser
+ENV UV_CACHE_DIR=/home/appuser/.cache/uv
 
 EXPOSE 8010
 
