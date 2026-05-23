@@ -7,6 +7,7 @@ on:
 
 jobs:
   auto-status:
-    uses: Hexadian-Corporation/.github/.github/workflows/auto-status-reusable.yml@main
+    # Pinned SHA from Hexadian-Corporation/.github (branch: main). Bumps via Dependabot.
+    uses: Hexadian-Corporation/.github/.github/workflows/auto-status-reusable.yml@82c6bd07bfbf95b123f19d6a0da0dede44976f68
     secrets:
       PROJECT_TOKEN: ${{ secrets.PROJECT_TOKEN }}

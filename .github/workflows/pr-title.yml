@@ -6,4 +6,5 @@ on:
 
 jobs:
   pr-title:
-    uses: Hexadian-Corporation/.github/.github/workflows/pr-title-reusable.yml@main
+    # Pinned SHA from Hexadian-Corporation/.github (branch: main). Bumps via Dependabot.
+    uses: Hexadian-Corporation/.github/.github/workflows/pr-title-reusable.yml@82c6bd07bfbf95b123f19d6a0da0dede44976f68
