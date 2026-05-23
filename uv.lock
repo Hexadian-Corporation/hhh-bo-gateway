@@ -414,7 +414,6 @@ source = { editable = "." }
 dependencies = [
     { name = "fastapi" },
     { name = "hexadian-auth-common", extra = ["fastapi"] },
-    { name = "httpx" },
     { name = "motor" },
     { name = "opyoid" },
     { name = "prometheus-client" },
@@ -439,7 +438,6 @@ requires-dist = [
     { name = "diff-cover", marker = "extra == 'dev'", specifier = ">=9.0" },
     { name = "fastapi", specifier = ">=0.115.0" },
     { name = "hexadian-auth-common", extras = ["fastapi"], specifier = ">=2.0.0,<3", index = "http://z12trh7jzskrmq7blkanpj05.212.227.227.33.sslip.io/hexadian/stable/+simple/" },
-    { name = "httpx", specifier = ">=0.28.0" },
     { name = "httpx", marker = "extra == 'dev'", specifier = ">=0.28.0" },
     { name = "motor", specifier = ">=3.6,<4" },
     { name = "opyoid", specifier = ">=0.7.0,<4.0" },
