@@ -55,7 +55,7 @@ uv run ruff format .
 | `HHH_BO_GATEWAY_HOST` | `0.0.0.0` |
 | `HHH_BO_GATEWAY_PORT` | `8010` |
 | `HHH_BO_GATEWAY_MONGO_URI` | `mongodb://localhost:27017` |
-| `HHH_BO_GATEWAY_MONGO_DATABASE` | `hhh_bo_gateway` |
+| `HHH_BO_GATEWAY_MONGO_DB` | `hhh_bo_gateway` |
 | `HHH_BO_GATEWAY_EVENTS_MONGO_URI` | `mongodb://localhost:27017` |
 | `HHH_BO_GATEWAY_EVENTS_DB` | `hhh_events` |
 | `HHH_BO_GATEWAY_CORS_ORIGINS` | `http://localhost:3000,http://localhost:3001` |

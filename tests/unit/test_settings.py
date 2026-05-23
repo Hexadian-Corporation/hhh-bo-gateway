@@ -49,3 +49,14 @@ def test_auth_partial_config_rejected(monkeypatch):
     monkeypatch.setenv("HHH_BO_GATEWAY_AUTH_AUDIENCES", "")
     with pytest.raises(ValidationError):
         Settings()
+
+
+def test_mongo_db_default(monkeypatch):
+    # WHY: clear the env var if leaked from the surrounding environment to assert the default.
+    monkeypatch.delenv("HHH_BO_GATEWAY_MONGO_DB", raising=False)
+    assert Settings().mongo_db == "hhh_bo_gateway"
+
+
+def test_mongo_db_env_var(monkeypatch):
+    monkeypatch.setenv("HHH_BO_GATEWAY_MONGO_DB", "custom_db")
+    assert Settings().mongo_db == "custom_db"
